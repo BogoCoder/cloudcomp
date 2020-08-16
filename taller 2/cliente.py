@@ -1,7 +1,7 @@
 from socket import *
 from time import sleep
 
-servidorNombre = "127.0.0.1" 
+servidorNombre = "3.86.13.121" 
 servidorPuerto = 12000
 
 def solicitar(tipoSolicitud, cantidad):
