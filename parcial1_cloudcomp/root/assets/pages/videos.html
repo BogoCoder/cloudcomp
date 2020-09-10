@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mantekada</title>
+    <link rel="stylesheet" href="../css/videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="conocemas.html" class="active">Conoce más</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="videos.html">Vídeos</a>
+        <a href="conciertos.html">Conciertos</a>
+        <a href="redes.html">Redes y contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+
+      <div class="container">
+          <div class = "mantekada">
+              <a href="../../index.html"><img class = "mantelogo" src="../img/logos/sampe_white_hd.svg" alt="Mantekada"></a>
+          </div>
+          
+          <div class = "sec">
+              <p align = "center" class="subti"><span>VÍDEOS</p>
+          </div>
+
+          <div class = "vid1">
+              <iframe class="video" width="420" height="315"
+              src="https://www.youtube.com/embed/J---aiyznGQ">
+              </iframe>
+          </div>
+
+      </div>
+    
+</body>
+</html>
