@@ -1,0 +1,10 @@
+Instancia 1:
+18.208.243.12
+ec2-18-208-243-12.compute-1.amazonaws.com
+
+Instancia 2:
+34.200.73.119
+ec2-34-200-73-119.compute-1.amazonaws.com
+
+Balanceador de carga:
+project1ALB-1051175093.us-east-1.elb.amazonaws.com
