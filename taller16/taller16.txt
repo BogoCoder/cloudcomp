@@ -1,0 +1,37 @@
+PUNTO 10
+
+app - creamos un objeto dash el cual crea la aplicación deseada.
+server - llamamos el atributo server de la app.
+
+df - creamos un dataframe usando pandas, con la información de frutas, la cantidad, y la ciudad.
+fig - creamos la figura que mostraremos en nuesta app, en este caso un diagrama de barras.
+
+app.layout - se crea el layout html del gráfico (donde se define el aspecto de la app) y se muestra en la página.
+main - cuando se ejecuta el archivo .py a través de consola, con un condicional se ejecuta el método de app run_server, con el modo debugging para conocer datos específicos de bugs en el transcurso de la ejecución de la aplicación.
+
+PUNTO 11
+
+gunicorn es un python web server gateway interface (WSGI) HTTP server.
+
+gunicorn --workers 1 --log-level=debug --timeout 60 --bind :8050 app:server
+
+--workers 1 : número de procesos worker.
+--log-level=debug : granularidad de los log de error que se muestran, en este caso solo se muestran los relacionados al debugging. 
+--timeout 60 : los workers inactivos por más de este tiempo son acabados y reiniciados.
+--bind :8050 : se especifica el puerto por el cual escuchará el socket/servidor.
+app:server : se ejecuta la app y el server definido
+
+PUNTO 2_3
+
+app.layout - se crea el layout html (donde se define el aspecto de la app) y se muestra en la página. En este caso se trata de simplemente una celda input y texto output.
+@app.callback - función que es automáticamente llamada por Dash cuando una propiedad de componente input cambia. En este caso, el callback llama a update_output_div, siempre que el valor en el input cambia.
+update_output_div - recibe el valor del input y retorna un string 'Output:' + input. Esta se ejecuta con el callback, cada vez que se modifica el valor en el input, como se dijo anteriormente. Después de retornar el valor se actualiza el valor del output y se muestra.
+
+PUNTO 2_6
+app.layout - análogo a lo anterior presentado, en este caso es un gráfico con un slider de años posibles a visualizar.
+@app.callback - análogo a lo anterior presentado, en este caso tenemos un callback que ejecuta la función update_figure cada vez que hay un cambio en el slider.
+update_figure - cuando es llamada por el callback, esta función filtra los datos con los correspondientes al año seleccionado en el slider, y entonces grafica un scatter plot con la variable x = 'gdpPercapita' y y = 'lifeExp', así mismo, asigna una duración a las transiciones.
+
+
+
+
