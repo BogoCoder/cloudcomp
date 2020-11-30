@@ -13,36 +13,12 @@ try:
     cursor = connection.cursor()
     print("Connected to dbproy4 \n")
     
-    # creating table courses_macc
-    sql_input_create = "CREATE TABLE courses_macc(name varchar(40), credits integer);"
-    cursor.execute(sql_input_create)
-    connection.commit()
-
-    print("courses_macc table created")
-
-    # inserting record
-    sql_input_insert = " INSERT INTO courses_macc VALUES (%s,%s)"
-    values = ('cloud computing', 2)
-    cursor.execute(sql_input_insert, values)
-    connection.commit()
-
-    count = cursor.rowcount
-    print (count, "record inserted")
-
-    # inserting record
-    values = ('topology', 3)
-    cursor.execute(sql_input_insert, values)
-    connection.commit()
-
-    count = cursor.rowcount
-    print (count, "record inserted")
-    
     # query
-    sql_input_query = "SELECT * FROM courses_macc"
+    sql_input_query = "SELECT * FROM saberpro_2019_2"
     cursor.execute(sql_input_query)
     records = cursor.fetchall() 
 
-    print("\nRecords in table courses_macc:")
+    print("\nRecords in table saberpro_2019_2:")
     for r in records:
         print (r)
 
